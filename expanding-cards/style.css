@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: rgb(247, 208, 225);
+  background: radial-gradient(circle, rgb(49, 46, 46) 0%, rgb(44, 44, 45) 100%);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  color: white;
+  border-radius: 40px;
+  flex: 0.2;
+  flex-direction: column;
+  margin: 5px;
+  position: relative;
+  transition: flex 0.6s ease-in-out;
+}
+
+.panel h3 {
+  font-size: 1.5rem;
+  padding-top: 25px;
+  padding-left: 20px;
+  position: absolute;
+}
+
+.active {
+  flex: 0.75;
+  font-family: "Muli", sans-serif;
+  font-size: 5rem;
+  border-radius: 15px;
+}
+
+.active h3 {
+  font-size: 3rem;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel h3 {
+    font-size: 1.45rem;
+  }
+
+  .panel {
+    flex: 0.1;
+  }
+
+  a {
+    font-size: 1.4rem;
+  }
+
+  .animeYear {
+    opacity: 0;
+  }
+}
+
+/* anime title  */
+.animeTitle a {
+  color: rgb(253, 251, 255);
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  background-color: rgba(60, 59, 59, 0);
+  font-family: "DM Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0.01em 0 #494948, 0 0.01em #494948, -0.01em 0 #494948,
+    0 -0.01em #494948;
+}
+
+a:hover {
+  color: rgb(17, 17, 32);
+  text-shadow: 0.01em 0 #f3f3f370, 0 0.01em #f3f3f370, -0.01em 0 #f3f3f370,
+    0 -0.01em #f3f3f370;
+  background: transparent;
+  padding: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.animeYear {
+  color: rgba(241, 241, 241, 0.426);
+  font-weight: 600;
+  font-size: 1.12rem;
+  margin-left: 86%;
+  padding: 5px;
+  opacity: 0;
+}
+
+.animeDesc {
+  color: rgb(22, 20, 20);
+  opacity: 0;
+  display: grid;
+  margin-top: 105px;
+  margin-bottom: 84px;
+  padding: 20px;
+  background-color: rgba(247, 244, 244, 0.664);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.reviewBox {
+  background-color: rgba(69, 69, 70, 0.287);
+  color: white;
+  display: grid;
+  transition: opacity 0.6s ease-in;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  border: 1.5px solid #4c4c4c47;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: #393737b3 10px 10px 10px;
+  margin-right: 20px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.username {
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-shadow: 5px 0px 5px rgb(45, 39, 39);
+  color: rgb(244, 248, 251);
+}
+
+.username:hover {
+  animation: move 1.8s infinite alternate;
+}
+
+.review {
+  display: flex;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 9px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.39);
+  border-radius: 12px;
+}
+
+.animePlanet {
+  width: 15px;
+  height: 15px;
+  margin-top: -98px;
+  margin-left: 10%;
+}
